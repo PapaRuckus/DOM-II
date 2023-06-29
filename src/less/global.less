@@ -1,5 +1,12 @@
 * {
   box-sizing: border-box;
+
+  transform: rotateY(0deg);
+  transition: .5s ease-in-out;
+  &.mirror {
+    transform: rotateY(180deg);
+    transition: .5s ease-in-out;
+  }
 }
 
 html {
@@ -9,6 +16,7 @@ html {
 html, body {
   font-family: 'Roboto', sans-serif;
 }
+
 
 h1, h2, h3, h4, h5 {
   font-family: 'Indie Flower', cursive;
