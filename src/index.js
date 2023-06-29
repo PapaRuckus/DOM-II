@@ -1,14 +1,16 @@
 import './less/index.less'
 
-//   * [ ] `mouseover`
+//   * [X] `mouseover`
+//   * [X] `mouseleave`
+//   * [X] `click`
 //   * [x] `keydown`
-//   * [ ] `wheel`
 //   * [x] `load`
-//   * [ ] `focus`
+//   * [x] `dblclick`
+//   * [ ] `wheel` -
+//   * [ ] `focus` -
 //   * [ ] `resize`
-//   * [ ] `scroll`
+//   * [ ] `scroll` - 
 //   * [ ] `select`
-//   * [ ] `dblclick`
 //   * [ ] `drag / drop`
 // Your code goes here!
 
@@ -21,7 +23,7 @@ import './less/index.less'
 const btnList = document.querySelectorAll(".btn");
 btnList.forEach((btn) => {
   btn.addEventListener("click", (event) => {
-    event.target.textContent.toggle = "Welcome Aboard!";
+    event.target.textContent = "Welcome Aboard!";
   });
 });
 
@@ -35,7 +37,7 @@ document.body.addEventListener('dblclick', evt => {
 window.addEventListener("keydown", (evt) => {
     if (evt.key == "b") {
         document.body.innerHTML = "<h1>WELCOME TO THE BUS ZONE</h1>";
-        document.body.style.backgroundColor = "red";
+        document.body.style.backgroundColor = "gold";
         document.body.style.color = "white";
         document.body.style.fontSize = "24px";
         document.body.style.textAlign = "center"
@@ -43,4 +45,19 @@ window.addEventListener("keydown", (evt) => {
     }
 });
 
-// 5 MOUSEOVER / MOUSELEAVE
+// 5,6 MOUSEOVER / MOUSELEAVE
+const busImage = document.querySelector('img[alt="bus in the sand"]');
+busImage.addEventListener('mouseover', evt => {
+    console.log("WELCOME ABOARD")
+})
+busImage.addEventListener('mouseleave', evt => {
+    console.log('NO WAIT COME BACK')
+})
+
+// 7 RESIZE
+window.addEventListener("resize", () => {
+  console.log("Window resized!");
+  console.log("New window width:", window.innerWidth);
+  console.log("New window height:", window.innerHeight);
+});
+
