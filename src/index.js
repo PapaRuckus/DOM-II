@@ -3,10 +3,10 @@ import './less/index.less'
 // Your code goes here!
 
 // 1 LOAD 
-// window.addEventListener('load', () => {
-//     alert(`Keep your hands AND feet inside the bus at all times!
-//         Also try and find the secret key!`)
-// })
+window.addEventListener('load', () => {
+    alert(`Keep your hands AND feet inside the bus at all times!
+        Also try and find the secret key!`)
+})
 
 // 2 CLICK 
 const btnList = document.querySelectorAll(".btn");
