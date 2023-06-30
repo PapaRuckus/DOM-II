@@ -20,8 +20,6 @@ btnList.forEach((btn) => {
   });
 });
 
-
-
 // 3 DBLCLICK
 document.body.addEventListener('dblclick', evt => {
     evt.target.classList.toggle('mirror')
