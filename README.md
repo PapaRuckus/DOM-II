@@ -42,7 +42,7 @@ Note: Drag and drop is a bit more advanced than the others. It's not actually a 
 
 ### Use preventDefault
 
-* [ ] Find a usecase for preventDefault. For example, you could prevent a link from navigating when clicked, or to navigate somewhere surprising.
+* [x] Find a usecase for preventDefault. For example, you could prevent a link from navigating when clicked, or to navigate somewhere surprising.
 
 ## Submission Format
 

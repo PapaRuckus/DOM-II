@@ -1,31 +1,25 @@
 import './less/index.less'
 
-//   * [X] `mouseover`
-//   * [X] `mouseleave`
-//   * [X] `click`
-//   * [x] `keydown`
-//   * [x] `load`
-//   * [x] `dblclick`
-//   * [ ] `wheel` -
-//   * [ ] `focus` -
-//   * [ ] `resize`
-//   * [ ] `scroll` - 
-//   * [ ] `select`
-//   * [ ] `drag / drop`
 // Your code goes here!
 
-// 1 LOAD ---
+// 1 LOAD 
 // window.addEventListener('load', () => {
-//     alert('Keep your hands AND feet inside the bus at all times!')
+//     alert(`Keep your hands AND feet inside the bus at all times!
+//         Also try and find the secret key!`)
 // })
 
-// 2 CLICK ---
+// 2 CLICK 
 const btnList = document.querySelectorAll(".btn");
 btnList.forEach((btn) => {
   btn.addEventListener("click", (event) => {
-    event.target.textContent = "Welcome Aboard!";
+    if (event.target.textContent === "Sign Me Up!") {
+      event.target.textContent = "Welcome Aboard!";
+    } else {
+      event.target.textContent = "Sign Me Up!";
+    }
   });
 });
+
 
 
 // 3 DBLCLICK
@@ -35,23 +29,19 @@ document.body.addEventListener('dblclick', evt => {
 
 // 4 KEY DOWN
 window.addEventListener("keydown", (evt) => {
-    if (evt.key == "b") {
-        document.body.innerHTML = "<h1>WELCOME TO THE BUS ZONE</h1>";
-        document.body.style.backgroundColor = "gold";
-        document.body.style.color = "white";
-        document.body.style.fontSize = "24px";
-        document.body.style.textAlign = "center"
-        document.body.style.marginTop = '100px'  
-    }
+  if (evt.key == "b") {
+    document.body.classList.toggle("bus-zone");
+  }
 });
 
 // 5,6 MOUSEOVER / MOUSELEAVE
+const h2 = document.querySelector('h2')
 const busImage = document.querySelector('img[alt="bus in the sand"]');
 busImage.addEventListener('mouseover', evt => {
-    console.log("WELCOME ABOARD")
+    h2.textContent = "Travel in Style!";
 })
 busImage.addEventListener('mouseleave', evt => {
-    console.log('NO WAIT COME BACK')
+    h2.textContent = "See the World!"
 })
 
 // 7 RESIZE
@@ -61,3 +51,37 @@ window.addEventListener("resize", () => {
   console.log("New window height:", window.innerHeight);
 });
 
+// 8 WHEEL
+const images = document.querySelectorAll("img");
+
+images.forEach((image) => {
+  image.addEventListener("wheel", (event) => {
+    const zoomFactor = event.deltaY > 0 ? .9 : 2;
+    image.style.transform = `scale(${zoomFactor})`;
+    event.preventDefault();
+  });
+});
+
+// 9 COPY
+const heading = document.querySelector('h1')
+window.addEventListener('copy', () => {
+    navigator.clipboard.readText()
+        .then(text => {
+            heading.textContent += text
+        });
+});
+
+// 10 CONTEXTMENU
+const elements = document.querySelectorAll(".container");
+
+elements.forEach((element) => {
+  element.addEventListener("contextmenu", (event) => {
+    event.preventDefault();
+    const currentColor = event.target.style.backgroundColor;
+    if (currentColor === "salmon") {
+      event.target.style.backgroundColor = "";
+    } else {
+      event.target.style.backgroundColor = "salmon"; 
+    }
+  });
+});
