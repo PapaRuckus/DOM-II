@@ -39,9 +39,9 @@ const busImage = document.querySelector("header.intro img");
 // busImage.addEventListener("mouseover", (evt) => {
 //   blob.textContent = "Travel in Style!";
 // });
-// busImage.addEventListener('mouseleave', evt => {
-//   blob.textContent = "See the World!"
-// });
+busImage.addEventListener('mouseleave', evt => {
+  blob.textContent = "See the World!"
+});
 
 // 7 RESIZE
 window.addEventListener("resize", () => {
