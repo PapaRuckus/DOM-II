@@ -34,14 +34,14 @@ window.addEventListener("keydown", (evt) => {
 
 // 5,6 MOUSEOVER / MOUSELEAVE
 const blob = document.querySelector('h2')
-// const busImage = document.querySelector("header.intro img");
+const busImage = document.querySelector("header.intro img");
 
-busImage.onmouseover = function (evt) {
-  blob.textContent = "Travel in Style!";
-};
-busImage.onmouseleave = function (evt) {
-  blob.textContent = "See the World!";
-};
+// busImage.onmouseover = function (evt) {
+//   blob.textContent = "Travel in Style!";
+// };
+// busImage.onmouseleave = function (evt) {
+//   blob.textContent = "See the World!";
+// };
 
 
 // 7 RESIZE
