@@ -35,9 +35,9 @@ window.addEventListener("keydown", (evt) => {
 // 5,6 MOUSEOVER / MOUSELEAVE
 const h2 = document.querySelector('h2')
 const busImage = document.querySelector('img[alt="bus in the sand"]');
-busImage.addEventListener('mouseover', evt => {
-    h2.textContent = "Travel in Style!";
-})
+busImage.addEventListener("mouseover", (evt) => {
+  h2.textContent = "Travel in Style!";
+});
 busImage.addEventListener('mouseleave', evt => {
     h2.textContent = "See the World!"
 })
