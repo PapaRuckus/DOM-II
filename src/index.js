@@ -36,12 +36,13 @@ window.addEventListener("keydown", (evt) => {
 const blob = document.querySelector('h2')
 const busImage = document.querySelector("header.intro img");
 
-// busImage.addEventListener("mouseover", (evt) => {
-//   blob.textContent = "Travel in Style!";
-// });
-// busImage.addEventListener('mouseleave', evt => {
-//   blob.textContent = "See the World!"
-// });
+busImage.onmouseover = function (evt) {
+  blob.textContent = "Travel in Style!";
+};
+busImage.onmouseleave = function (evt) {
+  blob.textContent = "See the World!";
+};
+
 
 // 7 RESIZE
 window.addEventListener("resize", () => {
