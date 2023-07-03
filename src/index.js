@@ -34,13 +34,14 @@ window.addEventListener("keydown", (evt) => {
 
 // 5,6 MOUSEOVER / MOUSELEAVE
 const blob = document.querySelector('h2')
-const busImage = document.querySelector('img[alt="bus in the sand"]').src;
-busImage.addEventListener("mouseover", (evt) => {
-  blob.textContent = "Travel in Style!";
-});
-busImage.addEventListener('mouseleave', evt => {
-  blob.textContent = "See the World!"
-});
+const busImage = document.querySelector("header.intro img");
+
+// busImage.addEventListener("mouseover", (evt) => {
+//   blob.textContent = "Travel in Style!";
+// });
+// busImage.addEventListener('mouseleave', evt => {
+//   blob.textContent = "See the World!"
+// });
 
 // 7 RESIZE
 window.addEventListener("resize", () => {
